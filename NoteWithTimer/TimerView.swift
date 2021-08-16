@@ -13,9 +13,6 @@ import Combine
 /// + イニシャライザの引数で閉じるためのバインディングを渡す
 struct TimerView: View {
   @Binding var isShow: Bool
-  /// CountDounTimerインスタンス
-  /// + environmentObject(_:) メソッドでを設定する
-  @EnvironmentObject var cd: CountDownTimerModel
 
   var body: some View {
      VStack {
@@ -27,30 +24,7 @@ struct TimerView: View {
                  .padding()
            }
         }
-        // スタートボタングループ
-        Group {
-           HStack {
-              Text("\(cd.formatedTime)")
-                 .font(Font.largeTitle.monospacedDigit())
-                 .fontWeight(.black)
-                 .padding()
-           }
-           HStack {
-              StartButton(60)
-              StartButton(120)
-           }
-           // 一時停止ボタン（起動直後のみ「スタート」）
-           Button(action: {
-              self.cd.start()
-           }) {
-              Text(self.cd.startButtonTitle)
-           }
-           .disabled(cd.startButtonDisable)
-           .padding()
-
-        }
-        .font(.title)
-
+        PickerView()
      }
 
   }

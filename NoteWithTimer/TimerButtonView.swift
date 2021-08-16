@@ -10,22 +10,23 @@ import Combine
 
 /// タイマーポップオーバーを開くボタン
 struct TimerButton: View {
-  @EnvironmentObject var cd: CountDownTimerModel
+    @EnvironmentObject var timeManager: TimeManager
 
-  @State private var showTimerPopover = false
+    @State private var showTimerPopover = false
 
-  var body: some View {
-     HStack {
-        Text("\(cd.formatedTime)")   // カウントダウン表示
-        Image(systemName: "timer")
-     }
-     .font(Font.title.monospacedDigit())
-     .onTapGesture { self.showTimerPopover = true }
-     .popover(isPresented: $showTimerPopover) {
-        TimerView(isShow: self.$showTimerPopover)
-           .environmentObject(self.cd)
-     }
+    var body: some View {
+        HStack {
+            Text("\(timeManager.displayTimer())")   // カウントダウン表示
+            Image(systemName: "timer")
+            ButtonsView()
+        }
+        .font(Font.title.monospacedDigit())
+        .onTapGesture { self.showTimerPopover = true }
+        .popover(isPresented: $showTimerPopover) {
+            TimerView(isShow: self.$showTimerPopover)
+                .environmentObject(self.timeManager)
+        }
 
-  }
+    }
 
 }

@@ -10,9 +10,9 @@ import PencilKit
 
 struct DrawingView: View {
 
-
     @State var rendition: Rendition?
     @State private var canvasView = PKCanvasView()
+    @State private var showingAlert = false
 
     var body: some View {
         NavigationView {
@@ -23,7 +23,7 @@ struct DrawingView: View {
                     .navigationBarItems(
                         leading: HStack {
                             TimerButton()
-                                .environmentObject(CountDownTimerModel())
+                                .environmentObject(TimeManager())
                         },
                     trailing: HStack {
                         Button(action: deleteDrawing) {
