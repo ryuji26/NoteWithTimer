@@ -8,18 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		461DB48626CA1BC000084583 /* NoteWithTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461DB48526CA1BC000084583 /* NoteWithTimerApp.swift */; };
-		461DB48826CA1BC000084583 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461DB48726CA1BC000084583 /* ContentView.swift */; };
+		461DB48826CA1BC000084583 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461DB48726CA1BC000084583 /* DrawingView.swift */; };
 		461DB48A26CA1BC100084583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461DB48926CA1BC100084583 /* Assets.xcassets */; };
 		461DB48D26CA1BC100084583 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461DB48C26CA1BC100084583 /* Preview Assets.xcassets */; };
+		461DB49526CA1C3100084583 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461DB49426CA1C3100084583 /* CanvasView.swift */; };
+		461DB49726CA1C4A00084583 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461DB49626CA1C4A00084583 /* StartButtonView.swift */; };
+		461DB49926CA1C6600084583 /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461DB49826CA1C6600084583 /* TimerButtonView.swift */; };
+		461DB49B26CA1C7A00084583 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461DB49A26CA1C7A00084583 /* TimerView.swift */; };
+		461DB49D26CA1C9800084583 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461DB49C26CA1C9800084583 /* Model.swift */; };
+		461DB49F26CA1CB400084583 /* Rendition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461DB49E26CA1CB400084583 /* Rendition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		461DB48226CA1BC000084583 /* NoteWithTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteWithTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		461DB48526CA1BC000084583 /* NoteWithTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteWithTimerApp.swift; sourceTree = "<group>"; };
-		461DB48726CA1BC000084583 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		461DB48726CA1BC000084583 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		461DB48926CA1BC100084583 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		461DB48C26CA1BC100084583 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		461DB48E26CA1BC100084583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		461DB49426CA1C3100084583 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		461DB49626CA1C4A00084583 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		461DB49826CA1C6600084583 /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
+		461DB49A26CA1C7A00084583 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		461DB49C26CA1C9800084583 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		461DB49E26CA1CB400084583 /* Rendition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rendition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				461DB48526CA1BC000084583 /* NoteWithTimerApp.swift */,
-				461DB48726CA1BC000084583 /* ContentView.swift */,
+				461DB48726CA1BC000084583 /* DrawingView.swift */,
+				461DB49426CA1C3100084583 /* CanvasView.swift */,
+				461DB49626CA1C4A00084583 /* StartButtonView.swift */,
+				461DB49826CA1C6600084583 /* TimerButtonView.swift */,
+				461DB49A26CA1C7A00084583 /* TimerView.swift */,
+				461DB49C26CA1C9800084583 /* Model.swift */,
+				461DB49E26CA1CB400084583 /* Rendition.swift */,
 				461DB48926CA1BC100084583 /* Assets.xcassets */,
 				461DB48E26CA1BC100084583 /* Info.plist */,
 				461DB48B26CA1BC100084583 /* Preview Content */,
@@ -138,8 +156,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				461DB48826CA1BC000084583 /* ContentView.swift in Sources */,
+				461DB49D26CA1C9800084583 /* Model.swift in Sources */,
+				461DB49B26CA1C7A00084583 /* TimerView.swift in Sources */,
+				461DB48826CA1BC000084583 /* DrawingView.swift in Sources */,
+				461DB49726CA1C4A00084583 /* StartButtonView.swift in Sources */,
+				461DB49926CA1C6600084583 /* TimerButtonView.swift in Sources */,
 				461DB48626CA1BC000084583 /* NoteWithTimerApp.swift in Sources */,
+				461DB49F26CA1CB400084583 /* Rendition.swift in Sources */,
+				461DB49526CA1C3100084583 /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ryuji.NoteWithTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -302,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ryuji.NoteWithTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
