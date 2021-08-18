@@ -12,7 +12,6 @@ struct DrawingView: View {
 
     @State var rendition: Rendition?
     @State private var canvasView = PKCanvasView()
-    @State private var showingAlert = false
 
     var body: some View {
         NavigationView {

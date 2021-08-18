@@ -14,6 +14,7 @@ struct TimerButton: View {
     @EnvironmentObject var timeManager: TimeManager
 
     @State private var showTimerPopover = false
+    @State var showAlert = false
 
     var body: some View {
         HStack {
@@ -28,6 +29,7 @@ struct TimerButton: View {
                         self.timeManager.duration -= 0.05
                         //残り時間が0以下の場合
                     } else {
+                        showAlert = true
                         //タイマーステータスを.stoppedに変更する
                         self.timeManager.timerStatus = .stopped
                         //アラーム音を鳴らす
@@ -43,7 +45,10 @@ struct TimerButton: View {
             TimerView(isShow: self.$showTimerPopover)
                 .environmentObject(self.timeManager)
         }
-
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("終了"),
+                  message: Text("タイマー終了時間です"),
+                  dismissButton: .default(Text("OK")))
+        }
     }
-
 }
