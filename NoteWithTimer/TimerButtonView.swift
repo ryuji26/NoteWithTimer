@@ -32,10 +32,8 @@ struct TimerButton: View {
                         showAlert = true
                         //タイマーステータスを.stoppedに変更する
                         self.timeManager.timerStatus = .stopped
-                        //アラーム音を鳴らす
-                        AudioServicesPlayAlertSoundWithCompletion(self.timeManager.soundID, nil)
-                        //バイブレーションを作動させる
-                        AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate)) {}
+//                        //アラーム音を鳴らす
+//                        AudioServicesPlayAlertSoundWithCompletion(self.timeManager.soundID, nil)
                     }
                 }
         }
